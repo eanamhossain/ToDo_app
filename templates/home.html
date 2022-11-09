@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+
+
+{% for todo in todo_list %}
+<div class="post-entry">
+    <h2>{{ todo.text }}</h2>
+</div>
+
+
+<div>
+<p><a href="{% url 'todo_delete' todo.pk %}"> delete </a></p>
+</div>
+
+{% endfor %} 
+{% endblock %}
